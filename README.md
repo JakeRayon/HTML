@@ -55,5 +55,5 @@ The most prominent pedagogical component of the site is its demonstration of *Pr
 
 # 👤 Author
 - Created by ***Jake Rayon***
-- Portfolio: [JakeRayon.com](dev.JakeRayon.com)
+- Portfolio: [JakeRayon.com](jakerayon.wixsite.com/portfolio/dev)
 - Contact: [JR@JakeRayon.com](mailto:JR@JakeRayon.com)
