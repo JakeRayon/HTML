@@ -1,5 +1,6 @@
-# Educational Web Glossary: 
-## *HTML / CSS / Javascript*
+# Web Dev Pro Glo
+## A Website Development Progressive Glossary
+### *HTML / CSS / Javascript*
 
 <br>
 
