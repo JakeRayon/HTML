@@ -18,7 +18,7 @@ The most prominent pedagogical component of the site is its demonstration of *Pr
 
 1. ***HTML Only*** - A **fully functional** HTML-Only static page explaining essential HTML elements.
 2. ***HTML + CSS*** - Adds visual styling and structure to the previous page while introducing key CSS concepts. 
-3. ***HTML + CSS + JavaScript*** - Completes the fully interactive website demonstrating and teaching dunamic behavior and real-time features dependant on Javascript code logic.
+3. ***HTML + CSS + JavaScript*** - Completes the fully interactive website demonstrating and teaching dynamic behavior and real-time features dependant on Javascript code logic.
 
 *Each stage builds upon the previous, introducing new educational content while remaining independently accessible and navigable.*
 
