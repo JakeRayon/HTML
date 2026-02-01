@@ -1,48 +1,803 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Web Glossary</title>
+<!DOCTYPE html> <!--Tells the browser to use most recent version of HTML-->
+
+<html lang="en"> <!--Spanish translation will be added later-->
+<head> <!--Contains useful and important metadata for the document-->
+    <meta charset="UTF-8"> <!--Ensures that all characters are properly displayed and avoids symbols or codes displaying instead-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ensures portability for sizing etc. across devices and platforms-->
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/005/538/683/small/code-or-coding-programmer-abstract-logo-illustration-design-vector.jpg" type="img/png">
+    <!--Assigns a favicon image to the browser tab-->
+    <title>Web Dev Pro Glo</title> <!--The title that will be displayed in the browser tab-->
 </head>
-<body>
+<body> <!--Identifies where the actual website display begins-->
 
-    <header>
-        <h1>HTML, CSS & JavaScript</h1>
-        <nav>
+<header id="header"> <!--Website Header Section-->
+    <h1><a href="https://html.jakerayon.com"><img width="70" height="70" src="https://static.vecteezy.com/system/resources/thumbnails/005/538/683/small/code-or-coding-programmer-abstract-logo-illustration-design-vector.jpg" alt="Web Dev Pro Glo Logo" title="Web Dev Pro Glo Logo"></a>Web Dev Pro Glo</h1>
+    <!--Logo in top corner that links to the website URL-->
+    <h2>Your Website Development Progressive Glossary</h2>
+    <h3>HTML / CSS / JavaScript</h3>
+    <nav> <!--Navigational Menu-->
+        <a href="#about">About</a>
+        <a href="#start">Getting Started</a>
+        <a href="#structure">Structural Tags</a>
+        <a href="#text">Text Styling</a>
+        <a href="#attributes">Attributes</a>
+        <a href="#footnotes">Footnotes</a>
+    </nav>
+    <br><br> <!--Adds spacing from other site contents-->
+</header>
+
+<main> <!--idenfies the main contents of the page -->
+<section id="about"> <!--Separates sections into separate navigable entities-->
+<h1>Hello World!</h1>
+<h3>Welcome to <i>Web Dev Pro Glo</i>, your Website Development Progressive Glossary!</h3>
+
+<h3>
+    Please pardon our dust during our construction! <br> <!--Message advising this is not the final version-->
+    Check back for updates to this page, as there is a lot in the works!
+</h3>
+    
+<p> <!--Normal text-->
+    Here you will find a <em> comprehensive list</em> of <strong>all the fundamentals</strong> you need to get started with Web Development in no time!<br>
+    But don't let this rudimentary look scare you away! <em>it's intentional ;)</em><br><br>
+
+    The most prominent pedagogical component of the site is its demonstration of <i>Progressive Enhancement</i>, where the glossary is 
+    intentionally published in the following <u>3 progressive layers</u>:
+    <ol> <!--Ordered list-->
+        <li><b><i>HTML-Only:</i></b> - A <u>fully functional</u> HTML-Only static page explaining essential <u>HTML elements</u> (this page).</li>
+        <li><b><i>HTML & CSS</i></b> - Adds <u>visual styling</u> and structure to the previous page while introducing key <u>CSS concepts.</u></li>
+        <li><b><i>HTML & CSS & JavaScript</i></b> - Completes the <u>fully interactive</u> website demonstrating and teaching dynamic behavior and real-time features dependant on <u>Javascript</u> code logic.</li>
+    </ol>
+</p>
+
+<aside>
+    <br><h4><i>Did you know?</i></h4>
+    <blockquote>
+        <p>
+            <i>Progressive Enhancement</i> comes from a metaphor in the Web-Dev community where <b>HTML</b> is the <i>cake</i>, 
+            <b>CSS</b> is the <i>frosting</i>, and <b>JavaScript</b> is the <i>decorations</i>. This demonstrates how each layer 
+            of the cake builds on the last, but at each step, the cake is <em>perfectly functional</em> in its own right!</i>.
+        </p>
+    </blockquote>
+</aside>
+</section><br><br> <!--For separation-->
+
+<section id="start"> <!--Start of glossary, linked to navigation menu in the header-->
+<h2>Getting Started: <small>Structuring Your HTML Code</small></h2>
+
+<p>The following code is one of the simplest HTML codes you can have:</p>
+
+<hr> <!--Separates code block-->
+<code><pre> <!--<code> styles text as if in a code editor and <pre> used to display tab stylling-->
+&lt;!DOCUTYPE html&gt;<br> <!--Escape codes-->
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+        &lt;main&gt;<br>
+            &lt;P&gt;Hello, World!&lt;/p&gt;<br>
+        &lt;/main&gt;<br>
+&lt/body&gt;<br>
+&lt;/html&gt;
+</pre></code>
+<hr>
+
+<p>Which simply prints out the following:</p>
+<p>Hello, World!</p><br> <!--print preview-->
+
+<div> <!--To separate educational sections-->
+    <h3>Definitions</h3>
+    <p>
+        The words between angle brackets (&lt; &gt;) are called <mark><i>Tags</i></mark><sub>1</sub>, representing the structure and meaning 
+        of the content on the page. They instruct the browser on how to interpret and/or display the content between the brackets.
+    </p> 
+    <p> <!--Separated to print on different lines-->
+        When a tag is used, it will generally appear twice; once in the opening statement &lt;p&gt; and another in the closing 
+        statement &lt;/p&gt;. Notice how the closing statement has a "/" before the tag name.
+    </p>
+    <p>
+        Some tags are <mark><i>Self-Closing Tags</i></mark><sub>2</sub>, meaning they only require the opening statement. 
+        &lt;!DOCUTYPE html&gt; is a common example of a self-closing tag, for example.
+    </p>
+</div><br>
+
+<div>
+        <h4>&lt;!DOCUTYPE html&gt;</h4>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used at the beginning of <u>every</u> HTML file and instructs the browser to use the most recent
+                version of HTML (currently HTML5) to ensure proper interpretation and processing of the contents.
+            </p>
+            <p>
+                Technically, more can be added to this tag to tell the browser to interpret the code in a specific context or in 
+                a specific version of HTML, but this is not very important and we'll come back to it later.
+            </p>
+        </details>
+</div>
+
+<div>
+    <h4>&lt;html&gt;</h4>
+    <details>
+        <summary>Definition and Use</summary>
+        <p>
+            This tag tells the browser that this is an <b>HTML document</b> and <b>holds all of the contents</b> on the webpage, from the visuals 
+            displayed on the site to the behind-the-scenes data, like links and styles.
+        </p>
+        <p>
+            It is <u>required</u> for every html file to be properly structured and for the browser to properly interpret the code.
+        </p>
+    </details>
+</div>
+
+
+<div>
+    <h4>&lt;main&gt;</h4>
+    <details>  
+        <summary>Definition and Use</summary>
+        <p>
+            This tag describes the <em>main focus</em> of the webpage itself and includes things that are <strong>unique to the page</strong> and 
+            <strong>are not repeated</strong> on other pages.
+        </p>
+        <p>
+            The &lt;main&gt; tag is useful for making your site more modular and separating items recurring on all pages, like headers, 
+            footers, site menus, etc.
+        </p>
+    </details>
+</div>
+
+<div>
+    <h4>&lt;body&gt;</h4>
+    <details>
+        <summary>Definition and Use</summary>
+        <p>
+            &lt;body&gt; is also a very important tag that is used in almost every html document.
+        </p>
+        <p>
+            It is used to define and wrap all of the visual contents of the site, including <b>text</b>, <b>images</b>, 
+            <b>buttons</b>, <b>links</b>, etc.
+        </p>
+    </details>
+</div>
+
+<div>
+    <h4>&lt;p&gt;</h4>
+    <details>
+        <summary>Definition and Use</summary>
+        <p>
+            The "p" stands for <i>paragraph</i> and represents a normally sized and formatted text printed to the screen.
+        </p>
+        <p>
+            This is one of the most commonly used tags and is typically used for normal lines or bodies of text, such as 
+            for <b>articles</b>, <b>blogs</b>, <b>definitions</b>, etc. 
+        </p>
+        <p>(The text in this definition is printed using the &lt;p&gt; tag)</p>
+    </details>
+</div><br>
+</section>
+
+<section id="structure">
+    <h2>Structural Tags</h2>
+    <p>
+        &lt;!DOCUTYPE html&gt;, &lt;html&gt;, &lt;main&gt;, &lt;body&gt;, and &lt;p&gt; are all examples of 
+        <mark><i>Structural Tags</i></mark><sub>3</sub>, which are used to define the structure and purpose of each piece of the webpage.
+    </p>
+    <p>In this section, we will list and explain the rest of the structural tags:</p>
+
+    <div>
+        <h3>&lt;head&gt;</h3></summary>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag comes before and outstide of the &lt;body&gt; tag is is used to provide the browser with important 
+                <mark><i>Metadata</i></mark><sub>4</sub> (which we will talk about in detail later). 
+            </p>
+            <p>Though it is a common mistake, this tag should <b>NOT</b> be confused with:</p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;header&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag comes after and inside of the &lt;body&gt; tag and is used for items that will always appear on the 
+                <strong>top of the screen</strong> and can even be fixed in place.
+            </p>
+            <p>
+                The contents of this tag are typically kept <strong>the same across all pages on a website</strong> and are typically
+                reserved for <b>branding (Logos, Names, etc.)</b>, <b>Site Menus</b>, and <b>Search Bars</b>, etc. 
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;footer&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag also comes after and inside of the &lt;body&gt; tag and is used for items that will always appear on the 
+                <strong>bottom of the screen</strong>.
+            </p>
+            <p>
+                The contents of this tag are also typically kept <b>the same across all pages on a website</b> and are typically
+                reserved for <b>Copyright and Ownership Mentions</b>, <b>Contact Information</b>, <b>Miscellaneous Links</b>,
+                <b>Legal Documents (Privacy Policies, etc.)</b>, etc. 
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;section&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used to make your page more modular. You can separate the page into related sections. These 
+                sections can also be linked to navigational buttons throughout the page.
+            </p>
+            <p>
+                This not only helps you organize your source code, it is a <mark><i>Semantic Tag</i></mark><sub>5</sub>, which allows you 
+                to use dynamic functions and greatly helps <mark><i>Search Engine Optimization</i></mark><sub>6</sub>.
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;article&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used to group a piece of self-contained content that can stand alone outside of the context of the webpage
+                and still be understood.
+            </p>
+            <p>
+                This tag is very helpful for <mark><i>Search Engines</i></mark><sub>7</sub>  to be able to recall and reference these bodies
+                of text which include <b>Blog Posts</b>, <b>Articles</b>, <b>Definitions</b>, <b>Product Descriptions</b>, etc.
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;aside&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used to identify <em>tangently related content</em>.
+            </p>
+            <p>
+                This can be used for commentary, fun facts, and <i>Did you know?</i> sections (like the one I have above)
+            </p>
+        </details>
+    </div>
+
+    <div id="nav">
+        <h3>&lt;nav&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used to establish a navigation menu, either to other websites or to sections of the current
+                webpage, like the menu below:
+            </p>
+            
+            <nav>
+                <a href="#nav">&lt;nav&gt; tag</a>
+                <a href="https://dev.jakerayon.com">My Portfolio</a>
+            </nav>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;div&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This is just a generic semantic tag, used when no other tag category quite fits the contents therewithin.
+            </p>
+            <p>
+                Still is just used to help make your site modular and well organized for the developer and the Search Engines.
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;span&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used for styling purposes to print something <mark><i>inline</i></mark> that would normally be printed
+                on a separate line by default. 
+            </p>
+            <p>
+                For example, if you imbeded an image and then used &lt;p&gt; to print text, they would normally be on different
+                lines, unless you use &lt;span&gt; to instruct the browser to display them ont he same line.
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;h#&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This tag is used to print large, bold heading text of different sizes, there are &lt;h1&gt; through &lt;h6&gt;,
+                with h1 being the largest and h6 being the smallest.<br>See below for an example:
+            </p>
+            <h1>&lt;h1&gt;</h1>
+            <h2>&lt;h2&gt;</h2>
+            <h3>&lt;h3&gt;</h3>
+            <h4>&lt;h4&gt;</h4>
+            <h5>&lt;h5&gt;</h5>
+            <h6>&lt;h6&gt;</h6>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;blockquote&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                This indents the text and styles it for quoted text and other tangent information<br>like the text below:
+            </p>
+            <blockquote>
+                <i>"Without HTML, there is no web—only raw data.”</i>
+            </blockquote>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;br&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                &lt;br&gt; stands for <i>break</i> and is used for formatting to move text onto new lines when they normally 
+                wouldn't. <br>For example, this whole block of text is within one &lt;p&gt; block, which doesn't normally allow for 
+                tabs or "enter" to display, <br>but if I put four &lt;br&gt; tabs, <br><br><br><br> I can move the subsequent text 
+                down here!
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>&lt;hr&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                &lt;br&gt; stands for <i>horizontal rule</i>, which is a fancy way of saying "horizontal line", like 
+                the one below:<hr>
+                <br><br>You can even put them close to eacother for styling: <hr><hr>
+            </p>
+        </details>
+    </div>
+
+    <div>
+        <h3>Lists</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>&lt;ul&gt;</mark> stands for <i>unorderd list</i>, which is just a fancy way of saying that it defines a bulleted list.
+            </p>
+            <p>
+                <mark>&lt;ol&gt;</mark> stands for <i>ordered list</i>, which is a fancy way of saying that it defines a numbered List
+                (1. 2. 3. etc.).
+            </p>
+            <p>
+                <mark>&lt;li&gt;</mark> stands for <i>list item</i> and is the tag you use to define the listed items within a determined 
+                list block. 
+            </p>
+
+            <code><pre>
+            <hr>
+            &lt;ul&gt;
+                &lt;li&gt;Apples&lt;/li&gt;
+                &lt;li&gt;Oranges&lt;/li&gt;
+                &lt;li&gt;Bananas&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;ol&gt;
+                &lt;li&gt;Apples&lt;/li&gt;
+                &lt;li&gt;Oranges&lt;/li&gt;
+                &lt;li&gt;Bananas&lt;/li&gt;
+            &lt;/ol&gt;
+            <hr>
+            </pre></code>
+
+            <p>The above code prints the following:</p>
             <ul>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#footer">Footer</a></li>
+                <li>Apples</li>
+                <li>Oranges</li>
+                <li>Bananas</li>
             </ul>
-        </nav>
-    </header>
-  
-  <main>
-    <br>
-    <br>
-    <br>
-    <h2 id="intro">Hello World!</h2>
-    <br>
-    <h3>Thank you for visiting my site</h3>
-    <h4>Please pardon our dust during our construction!</h3>
+
+            <ol>
+                <li>Apples</li>
+                <li>Oranges</li>
+                <li>Bananas</li>
+            </ol>
+        </details>
+    </div>
+
+    <div>
+        <h3>Descriptive Lists</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>&lt;dl&gt;</mark> stands for <i>descriptive list</i>, which defines block of code for a list of terms and 
+                their definitions or descriptions.
+            </p>
+            <p>
+                <mark>&lt;dt&gt;</mark> stands for <i>description term</i>, which defines one of the terms in the list.
+            </p>
+            <p>
+                <mark>&lt;dd&gt;</mark> stands for <i>descriptive definition</i> and is the tag you use to mark the defintion or description
+                list term that comes before it.
+            </p>
+
+            <code><pre>
+            <hr>
+            &lt;dl&gt;
+                &lt;dt&gt;Apples&lt;/dt&gt;
+                &lt;dd&gt;A juicy red fruit that comes from a tree.&lt;/dd&gt;
+
+                &lt;dt&gt;Oranges&lt;/dt&gt;
+                &lt;dd&gt;An orange citrus fruit.&lt;/dd&gt;
+
+                &lt;dt&gt;Bananas&lt;/dt&gt;
+                &lt;dd&gt;A tropical yellow berry fruit that comes from palm trees.&lt;/dd&gt;
+            &lt;/dl&gt;
+
+            <hr>
+            </pre></code>
+
+            <p>The above code prints the following:</p>
+            <dl>
+                <dt>Apples</dt>
+                <dd>A juicy red fruit that comes from a tree.</dd>
+
+                <dt>Oranges</dt>
+                <dd>An orange citrus fruit.</dd>
+
+                <dt>Bananas</dt>
+                <dd>A tropical yellow berry fruit that comes from palm trees.</dd>
+            </dl>
+        </details>
+    </div>
+
+    <div>
+        <h3>Tables</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p><strong>Pay Attention Here</strong>, because tables have a lot of moving parts in their code.</p>
+            <p>
+                <mark>&lt;table&gt;</mark> establishes the table block.
+            </p>
+            <p>
+                <mark>&lt;thead&gt;</mark> stands for <i>table head</i>, which establishes the header of the table, where the title 
+                and column lables will be, and is centered by deafault.
+            </p>
+            <p>
+                <mark>&lt;caption&gt;</mark> defines the description or title of the table. It is centered by default and normally 
+                appears above the column labels
+            </p>
+            <p>
+                <mark>&lt;th&gt;</mark> stands for <i>table head item</i> and is used to define each individual header item, usually
+                the column label
+            </p>
+            <p>
+                <mark>&lt;tbody&gt;</mark> establishes the table's body, where all of the data cells will be.
+            </p>
+            <p>
+                <mark>&lt;tr&gt;</mark> establishes a new table row, and the data cells within it go between the &lt;tr&gt; tags.
+            </p>
+            <p>
+                <mark>&lt;td&gt;</mark> is used to label each table data cell that will appear in the table.
+            </p>
+            <p>
+                <mark>&lt;tfoot&gt;</mark> is optional on most tables, but defines a labeled bottom area of the table, typically
+                where you would find a <b>Total:</b> section, etc.
+            </p>
+
+            <code><pre>
+            <hr>
+            &lt;table&gt;
+                &lt;thead&gt;
+                    &lt;caption&gt;&lt;b&gt;Price of Fruit&lt;/b&gt;&lt;/caption&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Fruit&lt;/th&gt;
+                        &lt;th&gt;Color&lt;/th&gt;
+                        &lt;th&gt;Cost&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Apples&lt;/td&gt;
+                        &lt;td&gt;Red&lt;/td&gt;
+                        &lt;td&gt;$2.50&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Oranges&lt;/td&gt;
+                        &lt;td&gt;Orange&lt;/td&gt;
+                        &lt;td&gt;$1.50&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Bananas&lt;/td&gt;
+                        &lt;td&gt;Yellow&lt;/td&gt;
+                        &lt;td&gt;$0.80&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;tfoot&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;pre&gt;   &lt;/pre&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;Total Price:&lt;/b&gt;&lt;/td&gt;
+                        &lt;td&gt;$4.80&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tfoot&gt;
+            &lt;/table&gt;
+            <hr>
+            </pre></code>
+
+            <p>The above code prints the following:</p>
+            <table>
+                <thead>
+                    <caption><b>Price of Fruit</b></caption>
+                    <tr>
+                        <th>Fruit</th>
+                        <th>Color</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apples</td>
+                        <td>Red</td>
+                        <td>$2.50</td>
+                    </tr>
+                    <tr>
+                        <td>Oranges</td>
+                        <td>Orange</td>
+                        <td>$1.50</td>
+                    </tr>
+                    <tr>
+                        <td>Bananas</td>
+                        <td>Yellow</td>
+                        <td>$0.80</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><pre>   </pre></td>
+                        <td><b>Total Price:</b></td>
+                        <td>$4.80</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
+
+
+
+        </details>
+    </div>
+</section>
+
+<br><br>
+
+<section id="text">
+    <h2>Text Styling Tags</h2>
+    <p>
+        Certain tags deal with <mark><i>Text Semantics</i></mark><sub>8</sub>, meaning that instead of organizing
+        or categorizing anything, they simply tell the browser how to display the specific text between the tags. 
+    </p>
+    <p>In this section, we will list and explain the most important Text-Semantic Tags</p>
    
-    <br>
+    <div>
+        <h3>Bold</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>&lt;b&gt;</mark> is used to style text into <b>bold</b>.<br> 
+                For example, the following code: <br><code>&lt;b&gt;This is bold!&lt;/b&gt;</code>
+                <br>Will print:<br> 
+                <b>This is bold!</b>
+            </p>
+            <p>
+                <mark>&lt;strong&gt;</mark> is also used to style text into an emphatic font and tell the browser "this is important!" 
+                and is also typically output as <strong>bold</strong> on most browsers, however, it also instructs accessibility 
+                screenreaders to provide an emphatic tone upon reading the text within the &lt;strong&gt; tags.
+                <br>For example, the following code: <br><code>&lt;strong&gt;This is also bold!&lt;/strong&gt;</code>
+                <br>Will print:<br> 
+                <strong>This is also bold!</strong>
+            </p>
+            <p>
+                In summary, use &lt;b&gt; for <strong>visual</strong>, <strong>purely <em>stylistic</em></strong> output, 
+                and use &lt;strong&gt; to signal to the browser of the importance of the word(s) and add an extra layer of accessibility 
+                for visually-impaired site visitors.
+            </p>
+        </details>
+    </div>
 
-    <p>Check back for new updates to this site, as there is a lot in the works!</p>
-          
+    <div>
+        <h3>Italic</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>i</mark> is used to style text into <i>Italic</i>.<br> 
+                For example, the following code: <br><code>&lt;i&gt;This is italic.&l;/i&gt;</code>
+                <br>Will print:<br> 
+                <i>This is italic.</i>
+            </p>
+            <p>
+                <mark>&lt;em&gt;</mark> is also used to style text into an emphatic font and is also 
+                typically output as <i>Italic</i> on most browsers, however, it also instructs accessibility 
+                screenreaders to provide an emphatic tone upon reading the text within the &lt;em&gt; tags.
+                <br>For example, the following code: <br><code>&lt;em&gt;This is also italic.&lt;/em&gt;</code>
+                <br>Will print:<br> 
+                <em>This is also italic.</em>
+            </p>
+            <p>
+                In summary, use &lt;i&gt; for <strong>visual</strong>, <strong>purely <em>stylistic</em></strong> output, 
+                and use &lt;em&gt; to signal to the browser of the importance of the word(s) and add an extra layer of accessibility 
+                for visually-impaired site visitors.
+            </p>
+        </details>
+    </div>
 
-    </main>
+    <div>
+        <h3>&lt;pre&gt;</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>&lt;pre&gt;</mark> stands for <i>Preformatted Text</i>, let me explain just what this means. 
+                <br><br>Text editors, (like <i>Visual Studio Code</i>, which I'm using right now)
+                ignore most empty spaces like tabs and new lines by default, as these are used to format code to make it 
+                more readable, and not necessarily because you want that extra space to be displayed on the screen.
+                <br>But what if you <em>did</em> want your text to appear exactly how you spaced and formatted it in the editor, 
+                like if you were displaying a block of code, perhaps?
+                <br>That's when &lt;pre&gt; comes into play, like in the following code:
+                <br><code><pre>
+                &lt;pre&gt;
+                    &lt;div&gt;
+                        &lt;p&gt;
+                            Hello World!
+                                This text is pre-formatted!
+                                    With spaces, and tabs, and all. 
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/pre&gt;
+                </pre></code>
+                <br>Which will print:
+                <pre>
+                    <div>
+                        <p>
+                            Hello World!
+                                This text is pre-formatted!
+                                    With spaces, and tabs, and all. 
+                        </p>
 
-  <br>
-  <br>
-  <br>
+                    </div>
+                </pre>
+            </p>
+        </details>
+    </div>
 
-    <footer id="footer">
-        <p>© 2026 Educational Web Glossary. Built with pure custom HTML by Jake Rayon.</p>
-        <address>GitHub Repository at <a href="https://github.com/jakerayon/html">GitHub.com</a><address>
-        <address>Online Portfolio at <a href="https://dev.JakeRayon.com">dev.JakeRayon.com</a><address>
-        <address>Contact us at <a href="mailto:Jr@JakeRayon.com">JR@JakeRayon.com</a></address>
-    </footer>
+    <div>
+        <h3>Other Text Styling</h3>
+        <details>
+            <summary>Definition and Use</summary>
+            <p>
+                <mark>&lt;u&gt;</mark> <u>underlines text</u>, like in the following code: <br><code>&lt;u&gt;This is underlined.&lt;/u&gt;</code>
+                <br>Will print:<br> 
+                <u>This is underlined.</u>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;mark&gt;</mark> <mark>highlights text</mark>, like in the following code: <br><code>&lt;mark&gt;This is highlighted.&lt;/mark&gt;</code>
+                <br>Will print:<br> 
+                <mark>This is highlighted.</mark>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;del&gt;</mark> <del>adds a strikethrough to text</del>, like in the following code: <br><code>&lt;del&gt;This is deleted.&lt;/del&gt;</code>
+                <br>Will print:<br> 
+                <del>This is deleted.</del>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;small&gt;</mark> <small>makes text slightly smaller than surrounding text</small>, like in the following code: <br><code>&lt;p&gt;&lt;small&gt;This is smaller&lt;/small&gt; than this.&lt;/p&gt;</code>
+                <br>Will print:<br> 
+                <p><small>This is smaller</small> than this.</p>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;ins&gt;</mark> is used to mark <ins>inserted text</ins>, usually to show edits and version history. It is often also
+                paired with &lt;del&gt; to show if text was removed in lieu of the edit. &lt;ins&gt; is usually output as underlined in most 
+                browsers. <br>
+                For example, the following code:
+                <br><code>&lt;ins&gt;This is an edit.&lt;/ins&gt;</code>
+                <br>Will print:<br> 
+                <ins>This is an edit.</ins>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;sub&gt;</mark> is used for<sub>subscripts</sub> such as footnotes, logarithms, etc.
+                <br>For example, the following code:
+                <br><code>&lt;p&gt;The answer is 3Log&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;</code>
+                <br>Will print:<br> 
+                <p>The answer is 3Log<sub>2</sub></p>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;sup&gt;</mark> is used for<sup>superscripts</sup> such as footnotes, exponents, etc.
+                <br>For example, the following code:
+                <br><code>&lt;p&gt;The answer is 3&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code>
+                <br>Will print:<br> 
+                <p>The answer is 3<sup>2</sup></p>
+            </p>
+            <hr>
+            <p>
+                <mark>&lt;code&gt;</mark> is used for <code>making text look like it is in a coding editor.</code>
+                <br>For example, when I show code snippets, I wrap the contents in the &lt;code&gt; tag like so:
+                <br><code>&lt;code&gt;&lt;p&gt;This is what it looks like when I format the code snippets in the html File&lt;/p&gt;&lt;/code&gt;</code>
+            </p>
+        </details>
+    </div>
+</section>
+
+<br><hr><hr>
+
+<section id="attributes">
+    <h2>Attributes</h2>
+    <p>
+        Some tags need extra information in order to completely fulfill their function; <mark><i>Attributes</i></mark> will 
+        be added to the opening tag to guide them. These attributes are always added to the opening tag and have the formula 
+        name_of_attribute="value it modifies".
+    </p>
+    <p>
+        Take the &lt;a&gt; tag for example. Its purpose is to create hyperlinks to websites, pages, or sections of the current page,
+        so you will pretty much never see it on its own.<br>
+        Instead, you'll typically see it containing the "href" attribute which tells it where to link to: <br>
+        <code>&lt;a; href="html.jakerayon.com"&gt;html.JakeRayon.com&lt;/a&gt;</code> will print this hyperlink: 
+        <a href="html.jakerayon.com">html.JakeRayon.com</a>
+    </p>
+    <p>
+        In this section, we will list and define all of the most important attributes that you're going to be using.
+    </p>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="footnotes">
+
+
+
+</section>
+
+</main>
+
+<footer id="footer">
+   <br><br>
+    <span><img width="25" height="25" src="https://static.vecteezy.com/system/resources/thumbnails/005/538/683/small/code-or-coding-programmer-abstract-logo-illustration-design-vector.jpg" alt="Web Dev Pro Glo Logo" title="Web Dev Pro Glo Logo"></span>Web Dev Pro Glo © 2026
+    
+    <img width="25" height="25" src="https://static.wixstatic.com/media/12f10e_3ab3b5c78be44c25832c863060e61384~mv2.png/v1/crop/x_100,y_48,w_330,h_359/fill/w_304,h_330,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/12f10e_3ab3b5c78be44c25832c863060e61384~mv2.png" alt="Signature Logo" title="Signature Logo"> Built by Jake Rayon using 100% Pure HTML Custom Code.
+
+    <p>
+        <span><i>Online Portfolio at</i> <a href="https://dev.JakeRayon.com">dev.JakeRayon.com</a></span>
+        <span> | <i>View Source Code on</i> <a href="https://GitHub.com/JakeRayon">GitHub<a/></span>
+        <span> | <i>Contact Me at</i> <a href="mailto:JR@JakeRayon.com">JR@JakeRayon.com</a></span>
+        <br><a href="#header"><i>Back to Top</i></a>
+    </p>
+</footer>
 
 </body>
 </html>
